@@ -1,203 +1,176 @@
-
-from dataclasses import dataclass, field
-from datetime import datetime
-from typing import Optional
-
-
-@dataclass
 class DataCenterData:
-    available_heat_W: float
-    coolant_supply_temperature_K: Optional[float] = None
-    coolant_return_temperature_K: Optional[float] = None
-    coolant_mass_flow_kg_s: Optional[float] = None
-    coolant_pressure_Pa: Optional[float] = None
+    def __init__(self):
+        self.available_heat_W = None
+        self.coolant_supply_temperature_K = None
+        self.coolant_return_temperature_K = None
+        self.coolant_mass_flow_kg_s = None
 
-    it_power_W: Optional[float] = None
-    facility_power_W: Optional[float] = None
-    cooling_electric_power_W: Optional[float] = None
-    cooling_load_W: Optional[float] = None
-    rejected_heat_W: Optional[float] = None
-
-    server_utilization_fraction: Optional[float] = None
-    heat_recovery_enabled: Optional[bool] = None
+        self.it_power_W = None
+        self.facility_power_W = None
+        self.cooling_electric_power_W = None
+        self.rejected_heat_W = None
+        self.server_utilization = None
 
 
-@dataclass
 class DistrictData:
-    district_id: str
-    heating_demand_W: float
+    def __init__(self):
+        self.district_id = None
+        self.heating_demand_W = None
 
-    required_supply_temperature_K: Optional[float] = None
-    return_temperature_K: Optional[float] = None
-    mass_flow_kg_s: Optional[float] = None
+        self.required_supply_temperature_K = None
+        self.return_temperature_K = None
 
-    space_heating_demand_W: Optional[float] = None
-    hot_water_demand_W: Optional[float] = None
-    industrial_heat_demand_W: Optional[float] = None
+        self.space_heating_demand_W = None
+        self.hot_water_demand_W = None
 
-    minimum_heat_delivery_W: Optional[float] = None
-    maximum_heat_acceptance_W: Optional[float] = None
+        self.minimum_heat_W = None
+        self.maximum_heat_W = None
 
 
-@dataclass
 class WeatherData:
-    outdoor_temperature_K: float
-    ground_temperature_K: Optional[float] = None
-    relative_humidity_fraction: Optional[float] = None
-    wind_speed_m_s: Optional[float] = None
-    solar_irradiance_W_m2: Optional[float] = None
-    atmospheric_pressure_Pa: Optional[float] = None
+    def __init__(self):
+        self.outdoor_temperature_K = None
+        self.ground_temperature_K = None
+        self.humidity = None
+        self.wind_speed_m_s = None
 
 
-@dataclass
 class GridData:
-    carbon_intensity_kg_per_kWh: float
-    marginal_carbon_intensity_kg_per_kWh: Optional[float] = None
-    electricity_price_USD_per_kWh: Optional[float] = None
-    renewable_generation_fraction: Optional[float] = None
-    grid_demand_W: Optional[float] = None
+    def __init__(self):
+        self.carbon_intensity_kg_per_kWh = None
+        self.electricity_price_USD_per_kWh = None
+        self.renewable_fraction = None
 
 
-@dataclass
 class PipeConfig:
-    pipe_id: str
-    district_id: str
-    length_m: float
+    def __init__(self):
+        self.pipe_id = None
+        self.district_id = None
+        self.length_m = None
 
-    inner_diameter_m: Optional[float] = None
-    wall_thickness_m: Optional[float] = None
-    insulation_thickness_m: Optional[float] = None
+        self.inner_diameter_m = None
+        self.wall_thickness_m = None
+        self.insulation_thickness_m = None
 
-    pipe_thermal_conductivity_W_mK: Optional[float] = None
-    insulation_conductivity_W_mK: Optional[float] = None
+        self.thermal_conductivity = None
+        self.insulation_conductivity = None
 
-    roughness_m: Optional[float] = None
-    nominal_mass_flow_kg_s: Optional[float] = None
-    burial_depth_m: Optional[float] = None
-    pipe_role: str = "supply"
+        self.mass_flow_kg_s = None
+        self.burial_depth_m = None
+        self.pipe_role = None
 
 
-@dataclass
 class HeatPumpConfig:
-    heat_pump_id: str
-    district_id: str
-    rated_heating_capacity_W: float
+    def __init__(self):
+        self.heat_pump_id = None
+        self.district_id = None
 
-    nominal_COP: Optional[float] = None
-    minimum_COP: Optional[float] = None
-    maximum_COP: Optional[float] = None
+        self.rated_heating_capacity_W = None
+        self.nominal_COP = None
+        self.minimum_COP = None
+        self.maximum_COP = None
 
-    min_source_temperature_K: Optional[float] = None
-    max_source_temperature_K: Optional[float] = None
-    max_sink_temperature_K: Optional[float] = None
-
-    maximum_electric_power_W: Optional[float] = None
-    minimum_load_fraction: Optional[float] = None
-    performance_map_path: Optional[str] = None
+        self.min_source_temperature_K = None
+        self.max_sink_temperature_K = None
+        self.maximum_electric_power_W = None
 
 
-@dataclass
 class PumpConfig:
-    pump_id: str
-    district_id: str
+    def __init__(self):
+        self.pump_id = None
+        self.district_id = None
 
-    rated_flow_kg_s: Optional[float] = None
-    rated_head_Pa: Optional[float] = None
-    rated_electric_power_W: Optional[float] = None
-    nominal_efficiency: Optional[float] = None
-    performance_map_path: Optional[str] = None
+        self.rated_flow_kg_s = None
+        self.rated_head_Pa = None
+        self.rated_electric_power_W = None
+        self.efficiency = None
 
 
-@dataclass
 class StorageConfig:
-    storage_id: str
-    capacity_J: float
+    def __init__(self):
+        self.storage_id = None
+        self.capacity_J = None
 
-    maximum_charge_W: Optional[float] = None
-    maximum_discharge_W: Optional[float] = None
-    initial_energy_J: Optional[float] = None
+        self.maximum_charge_W = None
+        self.maximum_discharge_W = None
+        self.initial_energy_J = None
+        self.efficiency = None
+        self.heat_loss_per_hour = None
 
-    round_trip_efficiency: Optional[float] = None
-    standing_loss_fraction_per_hour: Optional[float] = None
 
-
-@dataclass
 class DistrictConfig:
-    district_id: str
+    def __init__(self):
+        self.district_id = None
+        self.household_equivalents = None
+        self.design_peak_demand_W = None
 
-    household_equivalents: Optional[int] = None
-    design_peak_demand_W: Optional[float] = None
-
-    backup_heater_efficiency: Optional[float] = None
-    backup_heater_fuel: Optional[str] = None
-    backup_heater_capacity_W: Optional[float] = None
+        self.backup_heater_efficiency = None
+        self.backup_heater_fuel = None
+        self.backup_heater_capacity_W = None
 
 
-@dataclass
 class NetworkConfig:
-    districts: list[DistrictConfig]
-    pipes: list[PipeConfig]
-    heat_pumps: list[HeatPumpConfig]
+    def __init__(self):
+        self.districts = []
+        self.pipes = []
+        self.heat_pumps = []
+        self.pumps = []
+        self.storage = []
 
-    pumps: list[PumpConfig] = field(default_factory=list)
-    storage: list[StorageConfig] = field(default_factory=list)
 
-
-@dataclass
 class SimulationInput:
-    timestamp: datetime
-    data_center: DataCenterData
-    districts: list[DistrictData]
-    weather: WeatherData
-    grid: GridData
+    def __init__(self):
+        self.timestamp = None
+        self.data_center = None
+        self.districts = []
+        self.weather = None
+        self.grid = None
 
 
-@dataclass
 class DatasetMetadata:
-    dataset_name: str
-    source_name: str
-    source_url: Optional[str]
+    def __init__(self):
+        self.dataset_name = None
+        self.source_name = None
+        self.source_url = None
 
-    start_time: datetime
-    end_time: datetime
-    interval_seconds: int
+        self.start_time = None
+        self.end_time = None
+        self.interval_seconds = None
 
-    is_synthetic: bool = False
-    description: str = ""
-    license: Optional[str] = None
-    version: Optional[str] = None
+        self.is_synthetic = False
+        self.description = None
 
 
-@dataclass
 class DataQualityReport:
-    total_records: int
-    missing_records: int
-    imputed_values: int
-    warnings: list[str] = field(default_factory=list)
+    def __init__(self):
+        self.total_records = 0
+        self.missing_records = 0
+        self.imputed_values = 0
+        self.warnings = []
 
 
 class DataProvider:
 
-    def __init__(self, file_path: str):
+    def __init__(self, file_path):
         raise NotImplementedError
 
-    def load_data(self) -> None:
+    def load_data(self):
         raise NotImplementedError
 
-    def get_metadata(self) -> DatasetMetadata:
+    def get_metadata(self):
         raise NotImplementedError
 
-    def get_network_config(self) -> NetworkConfig:
+    def get_network_config(self):
         raise NotImplementedError
 
-    def get_all_data(self) -> list[SimulationInput]:
+    def get_all_data(self):
         raise NotImplementedError
 
-    def get_data(self, timestamp: datetime) -> SimulationInput:
+    def get_data(self, timestamp):
         raise NotImplementedError
 
-    def get_time_range(self) -> tuple[datetime, datetime]:
+    def get_time_range(self):
         raise NotImplementedError
 
-    def get_quality_report(self) -> DataQualityReport:
+    def get_quality_report(self):
         raise NotImplementedError
