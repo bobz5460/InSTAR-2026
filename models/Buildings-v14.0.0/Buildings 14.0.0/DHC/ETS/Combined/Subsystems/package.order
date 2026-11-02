@@ -1,0 +1,11 @@
+DHWConsumption
+HeatExchanger
+HeatPump
+HeatPumpDHWTank
+HeatPumpModular
+StorageTankWithExternalHeatExchanger
+StratifiedTankWithCommand
+SwitchBox
+WatersideEconomizer
+Validation
+BaseClasses

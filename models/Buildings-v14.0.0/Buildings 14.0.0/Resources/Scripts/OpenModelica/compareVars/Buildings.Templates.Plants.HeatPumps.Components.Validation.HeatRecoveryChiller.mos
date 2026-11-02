@@ -1,0 +1,16 @@
+compareVars :=
+  {
+    "bus.hrc.y1",
+    "bus.hrc.y1Coo",
+    "bus.pumChiWatHrc.y1",
+    "bus.pumHeaWatHrc.y1",
+    "TChiWatLvg.T",
+    "inlChiWat.T",
+    "bus.hrc.TChiWatSet",
+    "THeaWatLvg.T",
+    "inlHeaWat.T",
+    "bus.hrc.THeaWatSet",
+    "hrc.hrc.chi.PLR",
+    "hrc.hrc.chi.COP",
+    "hrc.hrc.chi.EER"
+  };
