@@ -1,9 +1,0 @@
-compareVars :=
-  {
-    "con.TZonCooSet",
-    "con.TZonHeaSet",
-    "con.TZon",
-    "con.ySupFan",
-    "con.yHeaCoi",
-    "con.yCooCoi"
-  };

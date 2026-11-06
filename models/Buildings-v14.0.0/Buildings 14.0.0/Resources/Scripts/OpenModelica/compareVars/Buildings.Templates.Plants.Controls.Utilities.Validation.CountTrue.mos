@@ -1,5 +1,0 @@
-compareVars :=
-  {
-    "couTru.y",
-    "couTruAllFal.y"
-  };

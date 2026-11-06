@@ -1,6 +1,0 @@
-compareVars :=
-  {
-    "res.dp",
-    "senTemIn.T",
-    "senTemOut.T"
-  };

@@ -1,5 +1,0 @@
-compareVars :=
-  {
-    "idxLasTru.y",
-    "idxLasTruAllFal.y"
-  };

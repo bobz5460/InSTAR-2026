@@ -1,7 +1,0 @@
-compareVars :=
-  {
-    "VSup.y",
-    "VExh.y",
-    "epsCal.epsSen",
-    "epsCal.epsLat"
-  };

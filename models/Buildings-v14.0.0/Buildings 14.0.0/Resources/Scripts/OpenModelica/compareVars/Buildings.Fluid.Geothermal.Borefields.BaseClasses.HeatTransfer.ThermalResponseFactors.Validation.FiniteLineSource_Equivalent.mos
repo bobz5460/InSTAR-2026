@@ -1,6 +1,0 @@
-compareVars :=
-  {
-    "hRea",
-    "hMir",
-    "h"
-  };

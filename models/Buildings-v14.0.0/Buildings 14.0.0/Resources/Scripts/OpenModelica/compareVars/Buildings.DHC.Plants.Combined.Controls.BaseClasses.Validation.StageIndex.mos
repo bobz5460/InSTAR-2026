@@ -1,7 +1,0 @@
-compareVars :=
-  {
-    "sta.u1",
-    "sta.u1Up",
-    "sta.u1Dow",
-    "sta.idxSta"
-  };

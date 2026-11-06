@@ -1,7 +1,0 @@
-compareVars :=
-  {
-    "TSup.y",
-    "senExhTemOut.T",
-    "senExhTemIn.T",
-    "eps.y"
-  };

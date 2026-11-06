@@ -1,5 +1,0 @@
-compareVars :=
-  {
-    "supPosErr[1]",
-    "supPosErr[2]"
-  };

@@ -1,6 +1,0 @@
-compareVars :=
-  {
-    "u.y",
-    "resSig.y",
-    "sam.y"
-  };

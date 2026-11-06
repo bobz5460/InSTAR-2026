@@ -1,6 +1,0 @@
-compareVars :=
-  {
-    "ideUse.yVal_actual",
-    "mPre_flow.y",
-    "ideUse.senMasFlo.m_flow"
-  };

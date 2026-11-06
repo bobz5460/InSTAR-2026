@@ -1,7 +1,0 @@
-compareVars :=
-  {
-    "temSet.uHea",
-    "temSet.uCoo",
-    "temSet.TSupHeaEcoSet",
-    "temSet.TSupCooSet"
-  };

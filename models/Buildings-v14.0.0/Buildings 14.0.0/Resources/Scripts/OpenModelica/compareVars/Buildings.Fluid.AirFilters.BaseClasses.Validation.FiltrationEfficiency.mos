@@ -1,5 +1,0 @@
-compareVars :=
-  {
-    "mCon.y",
-    "eps.y[1]"
-  };

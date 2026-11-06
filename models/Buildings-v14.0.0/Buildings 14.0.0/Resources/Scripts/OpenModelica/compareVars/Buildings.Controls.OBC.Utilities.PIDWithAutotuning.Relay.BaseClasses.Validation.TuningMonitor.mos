@@ -1,7 +1,0 @@
-compareVars :=
-  {
-    "tOn.y",
-    "tOff.y",
-    "tunSta.y",
-    "tunEnd.y"
-  };

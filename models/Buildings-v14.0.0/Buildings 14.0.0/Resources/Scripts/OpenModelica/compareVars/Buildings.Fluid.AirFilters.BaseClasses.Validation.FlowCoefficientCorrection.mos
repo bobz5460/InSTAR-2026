@@ -1,5 +1,0 @@
-compareVars :=
-  {
-    "rat.y",
-    "dpCor.y"
-  };

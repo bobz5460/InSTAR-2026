@@ -1,5 +1,0 @@
-compareVars :=
-  {
-    "sta.y1",
-    "sta.y1_actual"
-  };

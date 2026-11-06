@@ -1,9 +1,0 @@
-compareVars :=
-  {
-    "agePumCon.TSouIn",
-    "agePumCon.TSouOut",
-    "agePumCon.TSou",
-    "agePumCon.TSupDis",
-    "agePumCon.TRetDis",
-    "agePumCon.y"
-  };

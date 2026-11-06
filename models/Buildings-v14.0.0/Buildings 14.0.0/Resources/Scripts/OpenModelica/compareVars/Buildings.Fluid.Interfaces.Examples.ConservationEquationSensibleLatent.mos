@@ -1,6 +1,0 @@
-compareVars :=
-  {
-    "dynBal.Q_flow",
-    "dynBal.mWat_flow",
-    "dynBal.medium.T"
-  };

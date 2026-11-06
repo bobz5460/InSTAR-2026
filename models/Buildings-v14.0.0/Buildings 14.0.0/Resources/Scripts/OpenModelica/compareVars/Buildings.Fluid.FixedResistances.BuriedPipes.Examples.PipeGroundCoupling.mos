@@ -1,6 +1,0 @@
-compareVars :=
-  {
-    "senTemIn.T",
-    "senTemOut.T",
-    "senTemInNoGro.T"
-  };
